@@ -8,11 +8,21 @@
 
 import UIKit
 
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var blockRotation: Bool = false
+    
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        if self.blockRotation{
+            return UIInterfaceOrientationMask.all
+        }else{
+            return UIInterfaceOrientationMask.portrait
+        }
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         return true

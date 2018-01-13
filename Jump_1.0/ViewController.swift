@@ -12,6 +12,8 @@ import Foundation
 
 class ViewController: UIViewController {
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
